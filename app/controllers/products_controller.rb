@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product - Product.new params[:product]
+    @product = Product.new params[:product]
     if @product.save
       redirect_to :action => 'show', :id => @product.id
     else
@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   end
   
   def edit
-    @product - Product.find params[:id]
+    @product = Product.find params[:id]
   end
   
   def update

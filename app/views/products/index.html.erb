@@ -1,0 +1,15 @@
+<h1>Listing Products</h1>
+
+<p>
+  <hr>
+  <% @products.each do |product| %>
+    <h2><%= link_to product.title, :action => 'show', :id => product.id %>:</h2><%= product.description %><br>
+      <%= link_to 'Edit', :action => 'edit', :id => product.id %> 
+      <%= link_to 'Destroy', {:action => 'destroy', :id => product.id}, :confirm => 'Are you sure you want to destroy this product?', :method => :post %>
+  <hr>
+  <% end %>
+</p>
+
+<br />
+
+<%= link_to 'New Product', :action => 'new' %>

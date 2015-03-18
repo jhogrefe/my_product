@@ -1,0 +1,13 @@
+<h1>Edit Product <%= @product.title %></h1>
+
+<p>
+  <%= form_for :product, url: {:action => 'edit'} do |f| %>
+    <%= f.label :title, 'Title' %>
+    <%= f.text_field 'title' %><br>
+    <%= f.label :description, 'Description' %>
+    <%= f.text_field 'description' %><br>
+    <%= f.submit "Edit" %>
+  <% end %>
+</p>
+
+<%= link_to 'Back', :action => nil %>
