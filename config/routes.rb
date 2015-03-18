@@ -9,7 +9,9 @@ MyProduct::Application.routes.draw do
   get "/products/:id" => 'products#show'
 
   get "/products/:id/edit" => 'products#edit'
-    
+
+  post "/products/:id/edit" => 'products#edit'
+      
   post "/products/:id" => 'products#destroy'
   
   # The priority is based upon order of creation:
