@@ -2,11 +2,11 @@
 
 <p>
   <%= form_for :product, url: {:action => 'edit'} do |f| %>
-    <%= f.label :title, 'Title' %>
-    <%= f.text_field 'title' %><br>
-    <%= f.label :description, 'Description' %>
-    <%= f.text_field 'description' %><br>
-    <%= f.submit "Edit" %>
+    <%= f.label :title, 'Title' %>:<br>
+    <%= f.text_field 'title' %><br><br>
+    <%= f.label :description, 'Description' %>:<br>
+    <%= f.text_field 'description' %><br><br>
+    <%= f.submit "Save" %>
   <% end %>
 </p>
 
